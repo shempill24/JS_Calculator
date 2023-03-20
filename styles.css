@@ -1,0 +1,124 @@
+/* #### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0%, 100%) 
+### Body Copy
+
+- Font size (numbers): 32px
+
+### Font
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=League+Spartan:wght@700&display=swap');
+
+
+:root{
+    --numberbut:hsl(45, 7%, 89%);
+    --clearbuthov:hsl(185, 39%, 52%);
+    --clearbut:hsl(185, 58%, 25%);
+    --white: hsl(0, 0%, 100%) ;
+    --backgroundkeypad:  hsl(0, 5%, 81%);
+    --equals:hsl(25, 98%, 40%);
+    --display:hsl(0, 0%, 93%);
+    --background:hsl(0, 0%, 90%)
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+}
+.page-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.calculator-wrapper{
+    max-width: 600px;
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.header_el:nth-child(2){
+    font-size: 15px;
+
+}
+/* display */
+.number_display{
+    background-color: var(--display);
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+}
+/* keypad */
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+    background-color: var(--backgroundkeypad);
+    padding: 30px;
+    border-radius: 5px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--numberbut);
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+
+}
+.button:hover{
+    background-color: var(--white);
+}
+.clear{
+    background-color: var(--clearbut);
+    color: var(--white);
+}
+.clear:hover{
+    background-color: var(--clearbuthov);
+  
+}
+.equals{
+    background-color: var(--equals);
+    color:var(--white);
+}
+.stretch{
+    grid-column: span 2;
+}
