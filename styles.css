@@ -34,12 +34,15 @@
 :root{
     --numberbut:hsl(45, 7%, 89%);
     --clearbuthov:hsl(185, 39%, 52%);
-    --clearbut:hsl(185, 58%, 25%);
+    --clearbut:hsl(185, 42%, 37%);
     --white: hsl(0, 0%, 100%) ;
     --backgroundkeypad:  hsl(0, 5%, 81%);
     --equals:hsl(25, 98%, 40%);
+    --equalshov:hsl(25, 87%, 56%);
     --display:hsl(0, 0%, 93%);
-    --background:hsl(0, 0%, 90%)
+    --background:hsl(0, 0%, 90%);
+    --numdrop:hsl(35, 11%, 61%);
+    --cleardrop: hsl(185, 58%, 25%);
 }
 *{
     box-sizing: border-box;
@@ -63,10 +66,52 @@
 .header{
     display: flex;
     justify-content: space-between;
+    cursor: default;
 
 }
-.header_el:nth-child(2){
-    font-size: 15px;
+.toggle_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100px; 
+}
+.option,
+.theme{
+    font-size: 10px;
+
+}
+.theme{
+
+}
+.toggle_header{
+    display: flex;
+    width: 40px;
+    padding: 0 3px;
+    justify-content:space-between;
+    margin-bottom: 5px;
+  
+}
+.toggle{
+    background-color: var(--backgroundkeypad);
+    height: 15px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+   
+   
+
+}
+.ball{
+    background-color: var(--equalshov);
+    height: 9px;
+    width: 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+
+
 
 }
 /* display */
@@ -80,6 +125,7 @@
     justify-content: flex-end;
     align-items: center;
     padding-right: 15px;
+    cursor: default;
 }
 /* keypad */
 .keypad{
@@ -102,14 +148,17 @@
     width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
+    filter: drop-shadow(0 4px 0 var(--numdrop));
 
 }
 .button:hover{
     background-color: var(--white);
 }
+
 .clear{
     background-color: var(--clearbut);
     color: var(--white);
+    filter: drop-shadow(0 4px 0 var(--cleardrop));
 }
 .clear:hover{
     background-color: var(--clearbuthov);
@@ -118,6 +167,10 @@
 .equals{
     background-color: var(--equals);
     color:var(--white);
+
+}
+.equals:hover{
+    background-color: var(--equalshov);
 }
 .stretch{
     grid-column: span 2;
