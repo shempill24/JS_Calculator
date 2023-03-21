@@ -32,25 +32,66 @@
 
 
 :root{
-    --numberbut:hsl(45, 7%, 89%);
-    --clearbuthov:hsl(185, 39%, 52%);
-    --clearbut:hsl(185, 42%, 37%);
-    --white: hsl(0, 0%, 100%) ;
-    --backgroundkeypad:  hsl(0, 5%, 81%);
-    --equals:hsl(25, 98%, 40%);
-    --equalshov:hsl(25, 87%, 56%);
-    --display:hsl(0, 0%, 93%);
-    --background:hsl(0, 0%, 90%);
-    --numdrop:hsl(35, 11%, 61%);
-    --cleardrop: hsl(185, 58%, 25%);
+    --t1numberbut: hsl(30, 25%, 89%);
+    --t1clearbuthov:hsl(226, 42%, 76%);
+    --t1clearbut:hsl(225, 21%, 49%);
+    --t1white: hsl(0, 0%, 100%) ;
+    --t1backgroundkeypad:  hsl(223, 31%, 20%);
+    --t1equals:hsl(6, 63%, 50%);
+    --t1equalshov:hsl(6, 79%, 60%);
+    --t1display:hsl(224, 36%, 15%);
+    --t1background: hsl(222, 26%, 31%);
+    --t1numdrop:hsl(35, 11%, 61%);
+    --t1cleardrop: hsl(224, 28%, 35%);
+    --t1equaldrop:hsl(6, 70%, 34%);
+    --t1equalstext: hsl(0, 0%,100%);
+    --t1displaynumber: hsl(0, 0%, 100%);
+    --t1headertextcolor: hsl(0,0%,100%);
+    --t1numberbuttontext:hsl(221, 14%, 31%);
+
+    --t2numberbut:hsl(45, 7%, 89%);
+    --t2clearbuthov:hsl(185, 39%, 52%);
+    --t2clearbut:hsl(185, 42%, 37%);
+    --t2white: hsl(0, 0%, 100%) ;
+    --t2backgroundkeypad:  hsl(0, 5%, 81%);
+    --t2equals:hsl(25, 98%, 40%);
+    --t2equalshov:hsl(25, 87%, 56%);
+    --t2display:hsl(0, 0%, 93%);
+    --t2background:hsl(0, 0%, 90%);
+    --t2numdrop:hsl(35, 11%, 61%);
+    --t2cleardrop: hsl(185, 58%, 25%);
+    --t2equaldrop:hsl(6, 70%, 34%);
+    --t2equalstext: hsl(0, 0%, 100%);
+    --t2headertextcolor: hsl(0,100%,0%);
+    --t2displaynumber: hsl(0, 100%, 0);
+
+    --t3numberbut: hsl(268, 47%, 21%);
+    --t3clearbuthov:hsl(185, 39%, 52%);
+    --t3clearbut:hsl(281, 89%, 26%);
+    --t3white: hsl(0, 0%, 100%) ;
+    --t3backgroundkeypad:  hsl(268, 71%, 12%);
+    --t3equals:hsl(176, 100%, 44%);
+    --t3equalshov:hsl(176, 100%, 44%);
+    --t3equalstext: hsl(0, 100%, 0);
+    --t3display:hsl(268, 47%, 21%);
+    --t3background:hsl(268, 75%, 9%);
+    --t3numdrop:hsl(285, 91%, 52%);
+    --t3cleardrop: hsl(185, 58%, 25%);
+    --t3equaldrop:hsl(6, 70%, 34%);
+    --t3displaynumber: hsl(52, 100%, 62%);
+    --t3headertextcolor: hsl(52, 100%, 62%);
+    --t3numberbuttontext:hsl(52, 100%, 62%);
 }
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--background);
+    
     font-family: 'League Spartan', sans-serif;
     font-size: 32px;
+}
+body{
+    background-color: var(--t1background);
 }
 .page-wrapper{
     display: flex;
@@ -67,6 +108,7 @@
     display: flex;
     justify-content: space-between;
     cursor: default;
+    color: var(--t1headertextcolor);
 
 }
 .toggle_wrapper{
@@ -80,9 +122,7 @@
     font-size: 10px;
 
 }
-.theme{
 
-}
 .toggle_header{
     display: flex;
     width: 40px;
@@ -92,7 +132,7 @@
   
 }
 .toggle{
-    background-color: var(--backgroundkeypad);
+    background-color: var(--t1backgroundkeypad);
     height: 15px;
     border-radius: 9px;
     display: flex;
@@ -104,7 +144,7 @@
 
 }
 .ball{
-    background-color: var(--equalshov);
+    background-color: var(--t1equalshov);
     height: 9px;
     width: 9px;
     border-radius: 5px;
@@ -116,7 +156,7 @@
 }
 /* display */
 .number_display{
-    background-color: var(--display);
+    background-color: var(--t1display);
     width: 100%;
     height: 60px;
     border-radius: 5px;
@@ -126,6 +166,7 @@
     align-items: center;
     padding-right: 15px;
     cursor: default;
+    color: var(--t1displaynumber);
 }
 /* keypad */
 .keypad{
@@ -134,7 +175,7 @@
     gap: 10px;
     justify-items: center;
     width: 100%;
-    background-color: var(--backgroundkeypad);
+    background-color: var(--t1backgroundkeypad);
     padding: 30px;
     border-radius: 5px;
 }
@@ -144,33 +185,37 @@
     align-items: center;
     cursor: pointer;
     text-align: center;
-    background-color: var(--numberbut);
+    color: var(--t1numberbuttontext);
+    background-color: var(--t1numberbut);
     width: 100%;
     padding: 10px 15px;
     border-radius: 4px;
-    filter: drop-shadow(0 4px 0 var(--numdrop));
+    filter: drop-shadow(0 4px 0 var(--t1numdrop));
 
 }
 .button:hover{
-    background-color: var(--white);
+    background-color: var(--t1white);
 }
 
 .clear{
-    background-color: var(--clearbut);
-    color: var(--white);
-    filter: drop-shadow(0 4px 0 var(--cleardrop));
+    background-color: var(--t1clearbut);
+    color: var(--t1white);
+    font-size: 22px;
+    filter: drop-shadow(0 4px 0 var(--t1cleardrop));
 }
 .clear:hover{
-    background-color: var(--clearbuthov);
+    background-color: var(--t1clearbuthov);
   
 }
 .equals{
-    background-color: var(--equals);
-    color:var(--white);
+    background-color: var(--t1equals);
+    color: var(--t1equalstext);
+    font-size: 22px;
+    filter: drop-shadow(0 4px 0 var(--t1equaldrop));
 
 }
 .equals:hover{
-    background-color: var(--equalshov);
+    background-color: var(--t1equalshov);
 }
 .stretch{
     grid-column: span 2;
