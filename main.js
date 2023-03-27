@@ -76,33 +76,20 @@ btn.forEach((button)=>
         let value = button.getAttribute('value')
         if(value.match(reg)){
             if(heldnumber === '' && value.match(0)){
-                console.log("working")
                 return
             }
             heldnumber += value
             document.querySelector(".number_display").innerHTML = heldnumber
         }else if(value.match(reg1)){
-            
-            if(operator === ''){
+    
                 operator += value
                 equation += heldnumber
-                display = eval(equation)
-                document.querySelector(".number_display").innerHTML = display
                 equation += value
                 console.log(`testif${operator}`)
                 heldnumber =' '
                 operator=''
-            };
-            operator = ''
-            operator += value
-            equation += heldnumber
-            display = eval(equation)
-            document.querySelector(".number_display").innerHTML = display
-            equation += value
-            heldnumber =''
-            operator=''
-            console.log(equation)
-
+         
+            
         }else if(value.match("equals")){
     
             equation += heldnumber
