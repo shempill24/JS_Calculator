@@ -73,7 +73,8 @@ let operator = ''
 
 btn.forEach((button)=>
     button.addEventListener('click',()=>{
-        let value = button.getAttribute('value')
+        let value = button.getAttribute('id')
+        console.log(button.getAttribute('id'))
         if(value.match(reg)){
             if(heldnumber === '' && value.match(0)){
                 return
